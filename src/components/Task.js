@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
+export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask, onUnPinTask }) {
 	return (
 		<div className={`list-item ${state}`}>
 			<label htmlFor="checked" aria-label={`archiveTask-${id}`} className="checkbox">
@@ -22,7 +22,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
 			{state !== 'TASK_ARCHIVED' && (
 				<button
 					className="pin-button"
-					onClick={() => onPinTask(id)}
+					onClick={() => (state === 'TASK_PINNED' ? onUnPinTask(id) : onPinTask(id))}
 					id={`pinTask-${id}`}
 					aria-label={`pinTask-${id}`}
 					key={`pinTask-${id}`}

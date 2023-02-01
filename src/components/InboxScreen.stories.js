@@ -38,6 +38,8 @@ Default.play = async ({ canvasElement }) => {
 		await fireEvent.click(canvas.getByLabelText('pinTask-1'))
 		// Simulates pinning the third task
 		await fireEvent.click(canvas.getByLabelText('pinTask-3'))
+		// Simulates un pinning the third task
+		await fireEvent.click(canvas.getByLabelText('pinTask-3'))
 	})
 }
 
