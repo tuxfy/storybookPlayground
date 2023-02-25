@@ -1,4 +1,43 @@
-* {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .btn {
+    @apply rounded py-2 px-4 font-bold;
+  }
+  .btn-primary {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-primary:hover {
+    @apply bg-blue-700;
+  }
+  .btn-danger {
+    @apply bg-red-500 text-white;
+  }
+  .btn-danger:hover {
+    @apply bg-red-700;
+  }
+  .btn-warning {
+    @apply bg-yellow-500 text-white;
+  }
+  .btn-warning:hover {
+    @apply bg-yellow-700;
+  }
+  .btn-default {
+    @apply bg-gray-200;
+  }
+  .btn-default:hover {
+    @apply bg-gray-700 text-white;
+  }
+  .btn-success {
+    @apply bg-green-500 text-white;
+  }
+  .btn-success:hover {
+    @apply bg-green-700;
+  }
+}
+/* * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
@@ -51,6 +90,10 @@ input[type="reset"],
 input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
+}
+
+button.primary{
+  background-color: #26c6da;
 }
 
 @keyframes spin {
@@ -457,4 +500,4 @@ textarea {
   display: inline-block;
   vertical-align: top;
   max-width: 100%;
-}
+}  */
